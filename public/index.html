@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>CW2 Infected Attribute Calculator</h1>
+    </header>
+    <main>
+      <section class="input-wrapper">
+        <form action="">
+          <label for="attribute">Attribute</label>
+          <select name="attribute" id="attribute">
+            <option value="Strong against monsters"
+              >Strong against monsters</option
+            >
+            <option value="Max. HP">Max. HP</option>
+          </select>
+          <label for="gradeEq">EQ Grade</label>
+          <select name="gradeEq" id="gradeEq">
+            <option value="Normal">Normal</option>
+            <option value="Exotic">Exotic</option>
+          </select>
+          <label for="gradeStone">Stone Grade</label>
+          <select name="gradeStone" id="gradeStone">
+            <option value="Normal">Normal</option>
+            <option value="Exotic">Exotic</option>
+          </select>
+          <label for="level">Level</label>
+          <input type="number" name="level" id="level" />
+          <select name="level-slider" id="level-slider">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          <label for="empower">Exotic Empower</label>
+          <input type="checkbox" name="empower" id="empower" />
+        </form>
+      </section>
+      <div class="divider"></div>
+      <section class="result-wrapper">
+        <h2 class="result-subtitle">Calculated value</h2>
+        <h1 class="result-title">105</h1>
+      </section>
+      <div class="divider"></div>
+      <section class="detail-wrapper">
+        <div class="detail">
+          <span class="detail-subtitle">Level</span>
+          <span class="detail-title">+20</span>
+        </div>
+        <div class="detail">
+          <span class="detail-subtitle">EQ Grade</span>
+          <span class="detail-title">+30</span>
+        </div>
+        <div class="detail">
+          <span class="detail-subtitle">Stone Grade</span>
+          <span class="detail-title">+10</span>
+        </div>
+        <div class="detail">
+          <span class="detail-subtitle">Exotic Empower</span>
+          <span class="detail-title">+20</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
