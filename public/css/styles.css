@@ -35,7 +35,6 @@ select {
   color: inherit;
 }
 
-/* BASE STYLES END */
 /* https://codepen.io/avstorm/pen/jOEpBLW */
 input[type=checkbox] {
   -webkit-appearance: none;
@@ -173,6 +172,12 @@ input[type=checkbox] {
   cursor: not-allowed;
 }
 
+header h1 {
+  text-align: center;
+  font-size: 2.1rem;
+  margin: 2rem 1rem 3rem;
+}
+
 main {
   margin: 1rem;
 }
@@ -199,12 +204,20 @@ input {
   padding: 1rem 0;
 }
 
+option {
+  background: #2d3142;
+}
+
 .holder,
 .holder2 {
   border-bottom: 1px solid #bebebe;
   display: flex;
   flex-direction: column;
   margin-bottom: 3.4rem;
+}
+
+.holder {
+  width: 48%;
 }
 
 .holder2 {
@@ -229,12 +242,15 @@ input {
   flex-grow: 1;
 }
 
-.holder {
-  width: 48%;
+.divider {
+  background: #47db56;
+  height: 1px;
+  max-width: 375px;
+  margin: 2rem auto;
 }
 
-option {
-  background: #2d3142;
+.divider:first-of-type {
+  margin-top: 0;
 }
 
 .result-wrapper {
@@ -253,6 +269,16 @@ option {
   font-size: 6.4rem;
 }
 
+.info {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detail-wrapper {
+  max-width: 335px;
+}
+
 .detail {
   display: flex;
   justify-content: space-between;
@@ -260,10 +286,6 @@ option {
   border-bottom: 1px solid #bebebe;
   font-size: 2.4rem;
   padding: 0.6rem;
-}
-
-.detail-wrapper {
-  max-width: 335px;
 }
 
 .detail-subtitle {
@@ -274,27 +296,10 @@ option {
   content: "+";
 }
 
-.divider {
-  background: #47db56;
-  height: 1px;
-  max-width: 375px;
-  margin: 2rem auto;
-}
-
-.divider:first-of-type {
-  margin-top: 0;
-}
-
-header h1 {
-  text-align: center;
-  font-size: 2.1rem;
-  margin: 1rem;
-}
-
-.info {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 1rem;
+@media (max-width: 350px) {
+  .holder {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

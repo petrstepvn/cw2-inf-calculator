@@ -9,7 +9,7 @@ const inputData = {
 	gradeEq: '',
 	gradeStone: '',
 	level: 20,
-	empower: false,
+	empower: true,
 };
 
 const result = {
@@ -73,19 +73,15 @@ const fillDropdowns = () => {
 
 const getInputValues = (e) => {
 	const [attributeDOM, gradeEqDOM, gradeStoneDOM, levelDOM, levelSliderDOM, empowerDOM] = DOMInputElements;
-	console.log(e?.target.id);
 	if (e?.target.id === 'level') {
 		inputData.level = parseInt(levelDOM.value);
-		console.log('1');
 	} else if (e?.target.id === 'level-slider') {
 		inputData.level = parseInt(levelSliderDOM.value);
-		console.log('2');
 	}
 	inputData.attribute = attributeDOM.value;
 	inputData.gradeEq = gradeEqDOM.value;
 	inputData.gradeStone = gradeStoneDOM.value;
 	inputData.empower = empowerDOM.checked;
-	console.log(inputData);
 };
 
 const calculateResult = () => {
@@ -108,9 +104,6 @@ const setResultToDOM = () => {
 	empower.textContent = result.empower;
 	final.textContent = result.final;
 
-	// console.log(levelDOM);
-	// levelDOM.setAttribute('value', inputData.level)
-	// levelSliderDOM.setAttribute('value', inputData.level)
 	levelDOM.value = inputData.level.toString();
 	levelSliderDOM.value = inputData.level.toString();
 };
