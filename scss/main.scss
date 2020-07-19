@@ -1,0 +1,132 @@
+@use './base';
+@use './switch';
+@use './slider';
+@use './variables' as v;
+
+
+
+main {
+	margin: 1rem;
+}
+
+section {
+	margin: auto;
+	max-width: v.$width-content;
+}
+
+form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+label {
+	color: v.$text-secondary;
+	font-size: v.$font-s;
+}
+
+select {
+}
+
+select,
+input {
+	background: none;
+	padding: v.$padding-m 0;
+}
+
+.holder,
+.holder2 {
+	border-bottom: v.$border;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3.4rem;
+}
+.holder2 {
+	width: 100%;
+}
+
+.holder2:last-child {
+	border: 0;
+}
+
+.level-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+
+.level-input {
+	width: 4rem;
+	margin-right: 2rem;
+}
+
+.level-slider {
+	flex-grow: 1;
+}
+
+.holder {
+	width: 48%;
+}
+
+option {
+	background: v.$bg-primary;
+}
+
+.result-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.result-subtitle {
+	font-size: v.$font-l;
+	font-weight: normal;
+}
+.result-title {
+	color: v.$fg-primary;
+	font-size: v.$font-xl;
+}
+
+.detail {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	border-bottom: v.$border;
+	font-size: v.$font-l;
+	padding: v.$padding-s;
+}
+
+.detail-wrapper {
+	max-width: v.$width-content;
+}
+
+.detail-subtitle {
+	color: v.$text-secondary;
+}
+
+.detail-title:not(:empty):before {
+	content: '+';
+}
+
+.divider {
+	background: v.$fg-primary;
+	height: 1px;
+	max-width: v.$width-divider;
+	margin: 2rem auto;
+}
+
+.divider:first-of-type {
+	margin-top: 0;
+}
+
+header h1 {
+	text-align: center;
+	font-size: v.$font-m;
+	margin: 1rem;
+}
+
+.info {
+	font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: v.$padding-m;
+}

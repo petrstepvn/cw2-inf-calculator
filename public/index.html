@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <h1>CW2 Infected Attribute Calculator</h1>
-    </header>
-    <main>
-      <section class="input-wrapper">
-        <form action="">
-          <label for="attribute">Attribute</label>
-          <select name="attribute" id="attribute">
-            <option value="Strong against monsters"
-              >Strong against monsters</option
-            >
-            <option value="Max. HP">Max. HP</option>
-          </select>
-          <label for="gradeEq">EQ Grade</label>
-          <select name="gradeEq" id="gradeEq">
-            <option value="Normal">Normal</option>
-            <option value="Exotic">Exotic</option>
-          </select>
-          <label for="gradeStone">Stone Grade</label>
-          <select name="gradeStone" id="gradeStone">
-            <option value="Normal">Normal</option>
-            <option value="Exotic">Exotic</option>
-          </select>
-          <label for="level">Level</label>
-          <input type="number" name="level" id="level" />
-          <select name="level-slider" id="level-slider">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<h1>CW2 Infected Attribute Calculator</h1>
+		</header>
+		<main>
+			<section class="input-wrapper">
+				<form action="" id="form">
+					<div class="holder2">
+						<label for="attribute">Attribute</label>
+						<select name="attribute" id="attribute"> </select>
+					</div>
+					<div class="holder">
+						<label for="gradeEq">EQ Grade</label>
+						<select name="gradeEq" id="gradeEq"> </select>
+					</div>
+					<div class="holder">
+						<label for="gradeStone">Stone Grade</label>
+						<select name="gradeStone" id="gradeStone"> </select>
+					</div>
+					<div class="holder2">
+						<label for="level">Level</label>
+						<div class="level-wrapper">
+							<input class="level-input" type="number" min="0" max="30" name="level" id="level" value="20" />
+							<input class="level-slider" type="range" name="level-slider" id="level-slider" min="0" max="30" value="20" />
+					</div>
+					</div>
+					<!-- <select name="level-slider" id="level-slider">
             <option value="1">1</option>
             <option value="2">2</option>
-          </select>
-          <label for="empower">Exotic Empower</label>
-          <input type="checkbox" name="empower" id="empower" />
-        </form>
-      </section>
-      <div class="divider"></div>
-      <section class="result-wrapper">
-        <h2 class="result-subtitle">Calculated value</h2>
-        <h1 class="result-title">105</h1>
-      </section>
-      <div class="divider"></div>
-      <section class="detail-wrapper">
-        <div class="detail">
-          <span class="detail-subtitle">Level</span>
-          <span class="detail-title">+20</span>
-        </div>
-        <div class="detail">
-          <span class="detail-subtitle">EQ Grade</span>
-          <span class="detail-title">+30</span>
-        </div>
-        <div class="detail">
-          <span class="detail-subtitle">Stone Grade</span>
-          <span class="detail-title">+10</span>
-        </div>
-        <div class="detail">
-          <span class="detail-subtitle">Exotic Empower</span>
-          <span class="detail-title">+20</span>
-        </div>
-      </section>
-    </main>
+          </select> -->
+					<div class="holder2">
+						<label for="empower">Exotic Empower</label>
+						<span class="toggle-wrapper">
+							<input class="toggle" type="checkbox" name="empower" id="empower" checked />
+						</span>
+						<!-- <span class="switch"></span> -->
+					</div>
+					<!-- <input type="submit" value="Submit"> -->
+				</form>
+			</section>
+			<div class="divider"></div>
+			<section class="result-wrapper">
+				<h2 class="result-subtitle">Calculated value</h2>
+				<h1 id="result-final" class="result-title">105</h1>
+			</section>
+			<div class="divider"></div>
+			<section class="detail-wrapper">
+				<p class="info">How much does each variable give?</p>
+				<div class="detail">
+					<span class="detail-subtitle">Level</span>
+					<span id="result-level" class="detail-title"></span>
+				</div>
+				<div class="detail">
+					<span class="detail-subtitle">EQ Grade</span>
+					<span id="result-gradeEq" class="detail-title"></span>
+				</div>
+				<div class="detail">
+					<span class="detail-subtitle">Stone Grade</span>
+					<span id="result-gradeStone" class="detail-title"></span>
+				</div>
+				<div class="detail">
+					<span class="detail-subtitle">Exotic Empower</span>
+					<span id="result-empower" class="detail-title"></span>
+				</div>
+			</section>
+		</main>
 
-    <script src="./script.js"></script>
-  </body>
+		<script src="./script.js"></script>
+	</body>
 </html>
